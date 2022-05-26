@@ -20,9 +20,9 @@ nnoremap J 5j
 nnoremap K 4k
 inoremap jk <Esc>
 
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456 -O2<CR>
 autocmd filetype cpp nnoremap <F10> :!%:r<CR>
-autocmd filetype cpp nnoremap <F11> :w <bar> !g++ -std=c++14 % -o %:r && %:r <CR>
+autocmd filetype cpp nnoremap <F11> :w <bar> !g++ -std=c++14 % -o %:r -O2 && %:r <CR>
 autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
 
 set nu
